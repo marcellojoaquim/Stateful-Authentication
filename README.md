@@ -25,3 +25,5 @@ Desta forma, uma vez que o ID de referência é excluído no lado do servidor o 
 - Maior dificuldade em relação a escalabilidade
 - Maior dificuldade em propagar a autenticação entre microsserviços.
 
+## Arquitetura
+![Desenho da arquitetura](utils/stateful.png)
