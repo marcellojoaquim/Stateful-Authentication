@@ -28,3 +28,30 @@ Desta forma, uma vez que o ID de referência é excluído no lado do servidor o 
 
 ## Arquitetura
 ![Desenho da arquitetura](utils/stateful.png)
+
+## Tecnologias
+
+- Linguagem: Java
+- Frameworks: Spring Boot
+- Dados: PostgreSQL, Redis
+- Ferramentas/ORMs: JPA/Hibernate
+- Infraestrutura: Docker, Docker compose, Jenkins
+- Documentação: Swagger/OpenAPI, Postman
+
+## Como executar o projeto
+
+Há dois caminhos para executar o projeto
+
+### Executando o projeto com Docker
+
+- Execute o comando para empacotar a aplicação: mvn clean package
+- Execute o comando para gerar o build da imagem Docker: docker build -t stateful-auth-api
+- Execute o comando para gerar o build da imagem Docker: docker build -t stateful-any-api
+- Execute o docker compose na raiz dos projetos para executar toda a apicação: docker compose up
+
+### Build Execução do projeto com Jenkins
+
+- Adicione a cada projeto o git
+- Com cada projeto comitado, adicione a pipeline jenkins cada um dos projetos
+- Execute a pipeline
+- Esecute o comando: docker compose up
