@@ -18,7 +18,7 @@ Desta forma, uma vez que o ID de referência é excluído no lado do servidor o 
 - Gestão de controle de acesso simplificados.
 - Excelente para aplicações MVC, Monolíticas e processos internos.
 - Maior complexidade para autenticação de clientes externos.
-- Terceiros mal intencionados possuem maior dificuldade para esconder brechas de segurança.
+- Terceiros mal intencionados possuem maior dificuldade para explorar brechas de segurança.
 
 ## Desvantagens
 
