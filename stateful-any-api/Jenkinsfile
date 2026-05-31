@@ -1,0 +1,49 @@
+pipeline {
+    agent any
+    tools {
+        maven 'Maven 3.9.10'
+    }
+
+    environment {
+        IMAGE_NAME = "stateful-any-api"
+        IMAGE_TAG  = "latest"
+    }
+
+    stages {
+        stage('1. Checkout') {
+            steps {
+                echo 'Baixando código do repositório...'
+            }
+        }
+
+        stage('2. Maven Build') {
+            steps {
+                echo 'Iniciando o build do projeto com Maven...'
+                sh 'mvn clean package -DskipTests'
+            }
+        }
+
+        stage('3. Docker Build') {
+            steps {
+                echo "Construindo a imagem Docker: ${IMAGE_NAME}:${IMAGE_TAG}..."
+                sh "docker build -t ${IMAGE_NAME}:${IMAGE_TAG} ."
+            }
+        }
+
+        stage('4. Limpeza (Opcional)') {
+            steps {
+                echo 'Limpando rastros do build antigo...'
+                sh 'docker image prune -f'
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'Pipeline executado com sucesso! Imagem Docker pronta para uso.'
+        }
+        failure {
+            echo 'Falha no pipeline. Verifique os logs acima para identificar o erro.'
+        }
+    }
+}

@@ -1,0 +1,8 @@
+server:
+  port: ${PORT:8084}
+spring:
+  application:
+    name: stateful-any-api
+app:
+  client:
+    base-url: ${STATEFUL_BASE_URL:http://localhost:8083}

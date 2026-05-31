@@ -1,0 +1,2 @@
+INSERT INTO public.user (id, username, password) VALUES (1, 'UserEntity.Test', '$2a$10$MT4H1g0MOWy8NsEfTx1L5OYqZ0biLZL9OAb2dot9HfUkFML1M1zxy');
+INSERT INTO public.user (id, username, password) VALUES (2, 'UserEntity.new.Test', '$2a$10$MT4H1g0MOWy8NsEfTx1L5OYqZ0biLZL9OAb2dot9HfUkFML1M1zxy');
