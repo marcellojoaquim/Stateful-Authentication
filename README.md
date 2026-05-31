@@ -32,9 +32,9 @@ Desta forma, uma vez que o ID de referência é excluído no lado do servidor o 
 ## Tecnologias
 
 - Linguagem: Java
-- Frameworks: Spring Boot
-- Dados: PostgreSQL, Redis
-- Ferramentas/ORMs: JPA/Hibernate
+- Frameworks: Spring Boot, Spring Security
+- Dados: PostgreSQL, Redis, Validation
+- Ferramentas/ORMs: JPA/Hibernate, Lombok
 - Infraestrutura: Docker, Docker compose, Jenkins
 - Documentação: Swagger/OpenAPI, Postman
 
